@@ -5,7 +5,7 @@ git clone git@github.com:apoyan/im_proxy.git
 cd im_proxy
 bundle install
 bundle exec rails db:create
-bundle exec rails migrate
+bundle exec rails db:migrate
 bundle exec sidekiq -L log/sidekiq.log
 bundle exec rails server
 ```
