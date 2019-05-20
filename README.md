@@ -12,7 +12,7 @@ bundle exec rails server
 
 ## Usage
 
-### POST /magazines/[id]/articles
+### POST /send_message
 
 Response body:
 ```sh
