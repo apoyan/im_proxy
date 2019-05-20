@@ -9,6 +9,8 @@ module Messages
       messages = input[:messages]
 
       messages.each do |message|
+        next unless message.persisted?
+
         if message.delivery_at.present?
           MessageSenderWorker.perform_at(message.delivery_at, message.id)
         else

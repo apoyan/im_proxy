@@ -5,8 +5,8 @@ class MessageSenderWorker
 
   def perform(message_id)
     message = Message.find(message_id)
-    klass = "IM::#{message.type.classify}".constantize
+    klass = "IM::#{message.messenger.classify}Client".constantize
 
-    klass.send_message(message)
+    klass.new(message).send_message
   end
 end

@@ -11,7 +11,7 @@ module Messages
       messages = []
 
       receivers.each do |receiver|
-        receiver[:user_ids].each do |user_id|
+        receiver[:user_ids].uniq.each do |user_id|
           message = Message.new(
             user_id: user_id,
             messenger: receiver[:messenger],

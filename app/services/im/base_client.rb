@@ -1,6 +1,12 @@
 module IM
   class BaseClient
-    def send_message(message)
+    attr_accessor :message
+
+    def initialize(message)
+      @message
+    end
+
+    def send_message
       response
     end
 
