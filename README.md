@@ -14,7 +14,7 @@ bundle exec rails server
 
 ### POST /send_message
 
-Response body:
+Request body:
 ```sh
 {
     "message": {
